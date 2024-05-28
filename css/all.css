@@ -310,13 +310,13 @@ h5 {
 
 .footer {
   padding: 80px 0;
-  background-image: url(/img/footer-bg-lg.png);
+  background-image: url(../img/footer-bg-lg.png);
   background-position: center center;
   background-size: cover;
 }
 @media (max-width: 992px) {
   .footer {
-    background-image: url(/img/footer-bg-sm.png);
+    background-image: url(../img/footer-bg-sm.png);
   }
 }
 .footer-content {
@@ -408,7 +408,7 @@ h5 {
 .works-title-content-title h4::after {
   content: "";
   position: absolute;
-  background-image: url(/img/mark.png);
+  background-image: url(../img/mark.png);
   width: 148px;
   height: 8px;
   top: 80px;
@@ -434,7 +434,7 @@ h5 {
 .works-title-content-title h4 span::after {
   content: "";
   position: absolute;
-  background-image: url(/img/mark.png);
+  background-image: url(../img/mark.png);
   width: 148px;
   height: 8px;
   bottom: 55px;
