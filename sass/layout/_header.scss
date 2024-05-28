@@ -1,0 +1,109 @@
+//header
+.header{
+    padding: 32px 0;
+    border-bottom: 1px solid $primary-200;
+    @include rwd-pad{
+        padding: 8px 12px;
+    }
+    &-content{
+        display: flex;
+        align-items: center;
+        gap: 568px;
+        position: relative;
+        @include rwd-pad{
+            justify-content: space-between;
+            gap: 0;
+            height: 56px;
+            .menu-active{
+                display: flex;
+            }
+        }
+        &-menu{
+            display: flex;
+            gap:40px;
+            li{
+                position: relative;
+                a{
+                    padding: 8px;
+                }
+                &:hover{
+                    & .top-border::before{
+                        content: "";
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        top: 0;
+                        left: 0;
+                        border-top: 2px solid $primary-500;
+                        border-left: 2px solid $primary-500;
+                    }
+                    & .top-border::after{
+                        content: "";
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        top: 0;
+                        right: 0;
+                        border-top: 2px solid $primary-500;
+                        border-right: 2px solid $primary-500;
+                    }
+                    & .bottom-border::before{
+                        content: "";
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        bottom: 0;
+                        left: 0;
+                        border-bottom: 2px solid $primary-500;
+                        border-left: 2px solid $primary-500;
+                    }
+                    & .bottom-border::after{
+                        content: "";
+                        position: absolute;
+                        width: 8px;
+                        height: 8px;
+                        bottom: 0;
+                        right: 0;
+                        border-bottom: 2px solid $primary-500;
+                        border-right: 2px solid $primary-500;
+                    }
+                }
+            }
+            @include rwd-pad{
+                position: absolute;
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                top: 100%;
+                left: -7%;
+                width: 992px;
+                background-color: $primary-50;
+                z-index: 1;
+                padding-bottom: 20px;
+            }
+            @include rwd-mobile{
+                width: 375px;
+                left: -7%;
+                top: 100%;
+            }
+        }
+        &-btn{
+            display: none;
+            @include rwd-pad{
+                display: block;
+                border: 0;
+                background-color: transparent;
+                cursor: pointer;
+                span{
+                    font-size: $fs-1;
+                }
+                .btn-close{
+                    display: none;
+                }
+                .btn-active{
+                    display: block;
+                }
+            }
+        }
+    }
+}

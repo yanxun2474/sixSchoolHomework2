@@ -1,0 +1,188 @@
+//works
+.works-title{
+    padding: 80px 0;
+    @include rwd-pad{
+        padding: 40px 24px 80px;
+    }
+    &-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        &-title{
+            display: flex;
+            height: 192px;
+            position: relative;
+            .quote-left{
+                align-self: flex-start;
+            }
+            .quote-right{
+                align-self: flex-end;
+            }
+            h4{
+                align-self: center;
+                @include rwd-mobile{
+                    font-size: $fs-5;
+                    text-align: center;
+                }
+                &::after{
+                    content: "";
+                    position: absolute;
+                    background-image: url(/img/mark.png);
+                    width: 148px;
+                    height: 8px;
+                    top: 80px;
+                    right: 50px;
+                    z-index: -1;
+                    @include rwd-mobile{
+                        transform: scale(0.7,0.7);
+                        top: 115px;
+                    }
+                }
+                span{
+                    display: block;
+                    text-align: center;
+                    margin-top: 16px;
+                    @include rwd-mobile{
+                        padding: 0 20px;
+                    }
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        background-image: url(/img/mark.png);
+                        width: 148px;
+                        height: 8px;
+                        bottom: 55px;
+                        right: 80px;
+                        z-index: -1;
+                        @include rwd-mobile{
+                            bottom: 5px;
+                            right: 55px;
+                            transform: scale(0.7,0.7);
+                        }
+                    }
+                }
+            }
+            @include rwd-mobile{
+                flex-direction: column;
+                .quote-left{
+                    align-self: center;
+                }
+                .quote-right{
+                    display: none;
+                }
+            }
+        }
+        &-text{
+            display: flex;
+            gap: 40px;
+            @include rwd-pad{
+                flex-direction: column;
+                gap: 20px;
+            }
+            li{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+                width: 298px;
+                @include rwd-mobile{
+                    padding: 0 32px;
+                }
+                h6{
+                    position: relative;
+                    &::after{
+                        content: "";
+                        position: absolute;
+                        width: 24px;
+                        height: 2px;
+                        background-color: $primary-400;
+                        bottom: -4px;
+                        left: 25%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.works-content{
+    padding: 120px 0;
+    @include rwd-pad{
+        padding: 80px 0;
+    }
+    &-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 80px 24px;
+        margin-bottom: 72px;
+        @include rwd-mobile{
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+        li{
+            width: calc(50% - 12px);
+            @include rwd-mobile{
+                width: 100%;
+            }
+            img{
+                border-radius: 8px;
+                border: 1px solid $primary-200;
+                margin-bottom: 16px;
+            }
+        }
+        &-text{
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            padding: 0 16px;
+            @include rwd-mobile{
+                gap: 16px;
+            }
+            &-title{
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                @include rwd-mobile{
+                    font-size: $fs-5;
+                }
+            }
+            &-tags{
+                display: flex;
+                gap: 16px;
+                @include rwd-mobile{
+                    gap: 8px;
+                }
+                li{
+                    padding: 4px 12px;
+                    background-color: $primary-200;
+                    border-radius: 16px;
+                    width: auto;
+                    @include rwd-mobile{
+                        padding: 4px 8px;
+                    }
+                }
+            }
+        }
+    }
+    &-pagesBtn{
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        a{
+            padding: 2px 13px;
+            &:hover{
+                background-color: $primary-800;
+                color: $primary-50;
+                border-radius: 4px;
+                font-weight: normal;
+            }
+        }
+        &-active{
+            background-color: $primary-800;
+            color: $primary-50;
+            border-radius: 4px;
+        }
+    }
+}
