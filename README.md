@@ -1,4 +1,4 @@
-# scss path
+# scss 路徑
 ```csharp
 sass/
 |
@@ -12,11 +12,12 @@ sass/
 |   |– _typography.scss   # Typography rules
 |
 |– layout/
-|   |– _header.scss       # Header
-|   |– _footer.scss       # Footer
+|   |– _header.scss       # 頁手
+|   |– _footer.scss       # 頁尾
 |
 |– pages/
-|   |– _works.scss         # works specific styles
+|   |– _works.scss        # works css樣式
+|   |- _index.scss        # index css 樣式 
 |
-`– main.scss              # Main Sass file
+`– main.scss              # 主要檔案
 ```
