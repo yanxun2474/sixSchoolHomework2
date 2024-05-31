@@ -1,0 +1,639 @@
+//index
+.home-banner {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    margin-bottom: 120px;
+
+    .imgSm-status {
+        display: none;
+    }
+
+    .container {
+        margin-right: 0px;
+    }
+
+    @include rwd-pad {
+        flex-direction: column-reverse;
+        margin-bottom: 40px;
+
+        .container {
+            margin: 0 auto;
+        }
+
+    }
+
+    @include rwd-mobile {
+        .imgLg-status {
+            display: none;
+        }
+
+        .imgSm-status {
+            display: block;
+
+        }
+    }
+
+    &-content {
+        max-width: 430px;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        @include rwd-mobile {
+            padding: 40px 53.5px;
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            @include rwd-pad {
+                text-align: center;
+            }
+
+            @include rwd-mobile {
+
+                h2 {
+                    font-size: $fs-2;
+                }
+            }
+
+            .underline {
+                background-image: url(../../img/mark.png);
+                background-repeat: repeat-x;
+                background-position: 0 100%;
+                background-size: 100% 8px;
+            }
+        }
+
+        &-links {
+            display: flex;
+            gap: 16px;
+
+            @include rwd-pad {
+                justify-content: space-evenly;
+            }
+
+            @include rwd-mobile {
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+.home-title {
+    margin-bottom: 80px;
+
+    &-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+    }
+
+    &-text_sm {
+        display: none;
+    }
+
+    @include rwd-mobile {
+        margin-bottom: 40px;
+
+        &-text {
+            display: none;
+        }
+
+        &-text_sm {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 16px;
+        }
+    }
+}
+
+.home-travel {
+    background-image: url(../img/homepage-work1-bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    padding-top: 80px;
+
+    @include rwd-mobile {
+        display: none;
+    }
+
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include rwd-pad {
+            flex-direction: column;
+            gap: 40px;
+            padding-bottom: 80px;
+        }
+
+        &-text {
+            padding: 80px 60px 56px;
+            background: #FFFFFF1A;
+            backdrop-filter: blur(3px);
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            &-tags {
+                display: flex;
+                gap: 16px;
+                border-bottom: 1px solid $primary-200;
+                padding-bottom: 40px;
+
+                li {
+                    background-color: $primary-50;
+                    border-radius: 16px;
+                    padding: 4px 12px;
+                }
+            }
+
+            &-link {
+                align-self: center;
+
+                a {
+                    padding: 16px 32px;
+                    background-color: $primary-900;
+                    color: $primary-50;
+                    border-radius: 5px;
+
+                    span {
+                        vertical-align: sub;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-travel_sm {
+    display: none;
+
+    @include rwd-pad {
+        display: none;
+    }
+
+    @include rwd-mobile {
+        display: block;
+    }
+
+    &-content {
+        &-img {
+            background-image: url(../img/homepage-work1-bg.png);
+            background-position: center center;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.4);
+            background-blend-mode: multiply;
+            padding: 93px 40px 0;
+
+        }
+
+        &-text {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 24px;
+            margin-bottom: 48px;
+
+            &-tags {
+                display: flex;
+                gap: 8px;
+
+                li {
+                    background-color: $primary-200;
+                    border-radius: 16px;
+                    padding: 4px 12px;
+                }
+            }
+
+            &-link {
+                align-self: center;
+
+                a {
+                    padding: 16px 32px;
+                    background-color: $primary-900;
+                    border-radius: 5px;
+
+                    span {
+                        vertical-align: sub;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-app {
+    background-image: url(../img/homepage-work2-lg.png);
+    background-position: center center;
+    background-size: cover;
+    padding: 200px 0;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        right: 50%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    @include rwd-pad {
+        &::before {
+            right: 45%;
+        }
+    }
+
+    @include rwd-mobile {
+        display: none;
+        
+    }
+
+    &-content {
+        display: flex;
+
+        &-text {
+            padding: 80px 60px 56px;
+            background: #FFFFFF1A;
+            backdrop-filter: blur(3px);
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            &-tags {
+                display: flex;
+                gap: 16px;
+                border-bottom: 1px solid $primary-200;
+                padding-bottom: 40px;
+
+                li {
+                    background-color: $primary-50;
+                    border-radius: 16px;
+                    padding: 4px 12px;
+                }
+            }
+
+            &-link {
+                align-self: center;
+
+                a {
+                    padding: 16px 32px;
+                    background-color: $primary-900;
+                    border-radius: 5px;
+
+                    span {
+                        vertical-align: sub;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-app_sm {
+    display: none;
+
+    @include rwd-pad {
+        display: none;
+    }
+
+    @include rwd-mobile {
+        display: block;
+    }
+
+    &-content {
+        &-text {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 24px;
+            margin-bottom: 48px;
+
+            &-tags {
+                display: flex;
+                gap: 8px;
+
+                li {
+                    background-color: $primary-200;
+                    border-radius: 16px;
+                    padding: 4px 12px;
+                }
+            }
+
+            &-link {
+                align-self: center;
+
+                a {
+                    padding: 16px 32px;
+                    background-color: $primary-900;
+                    border-radius: 5px;
+
+                    span {
+                        vertical-align: sub;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-clinic {
+    background-image: url(../img/homepage-work3-bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    padding: 176px 0 112px;
+
+    @include rwd-mobile {
+        display: none;
+    }
+
+    &-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include rwd-pad {
+            flex-direction: column;
+        }
+
+        &-text {
+            padding: 80px 60px 56px;
+            background: #FFFFFF1A;
+            backdrop-filter: blur(3px);
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            @include rwd-pad {
+                margin-top: 80px;
+            }
+
+            &-tags {
+                display: flex;
+                gap: 16px;
+                border-bottom: 1px solid $primary-200;
+                padding-bottom: 40px;
+
+                li {
+                    background-color: $primary-50;
+                    border-radius: 16px;
+                    padding: 4px 12px;
+                }
+            }
+
+            &-link {
+                align-self: center;
+
+                a {
+                    padding: 16px 32px;
+                    background-color: $primary-900;
+                    border-radius: 5px;
+
+                    span {
+                        vertical-align: sub;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-clinic_sm {
+    display: none;
+
+    @include rwd-pad {
+        display: none;
+    }
+
+    @include rwd-mobile {
+        display: block;
+    }
+
+    &-content {
+        &-img {
+            background-image: url(../img/homepage-work3-bg.png);
+            background-position: center center;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.4);
+            background-blend-mode: multiply;
+            padding: 90px 40px;
+
+        }
+
+        &-text {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 24px;
+            margin-top: 24px;
+            margin-bottom: 48px;
+
+            &-tags {
+                display: flex;
+                gap: 8px;
+
+                li {
+                    background-color: $primary-200;
+                    border-radius: 16px;
+                    padding: 4px 12px;
+                }
+            }
+
+            &-link {
+                align-self: center;
+
+                a {
+                    padding: 16px 32px;
+                    background-color: $primary-900;
+                    border-radius: 5px;
+
+                    span {
+                        vertical-align: sub;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.home-services {
+    padding: 120px;
+    background-image: url(../img/homepage-services-bg.png);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 120px;
+
+    @include rwd-pad {
+        padding: 0 34.5px;
+        margin-top: 80px;
+    }
+
+    &-content {
+        &-cards {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+
+            li {
+                background-image: url(../img/service-item-bg.png);
+                background-position: center center;
+                background-size: cover;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 24px;
+                padding: 20px 30px;
+                border-radius: 16px;
+                width: 25%;
+                height: 306px;
+            }
+
+            @include rwd-mobile {
+                flex-direction: column;
+
+                li {
+                    width: 100%;
+                }
+            }
+        }
+
+        &-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            padding-top: 80px;
+
+            a {
+                padding: 16px 32px;
+                background-color: $primary-900;
+                border-radius: 5px;
+
+                span {
+                    vertical-align: sub;
+                }
+            }
+
+            @include rwd-pad {
+                padding-bottom: 80px;
+            }
+
+            @include rwd-mobile {
+                p {
+                    font-size: $fs-5;
+                }
+
+                a {
+                    font-size: $fs-6;
+                }
+            }
+        }
+    }
+}
+
+.home-articles {
+    margin-bottom: 120px;
+
+    &-content {
+
+        &-item {
+            display: flex;
+            gap: 24px;
+
+            li {
+                width: 33.33%;
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+
+                img {
+                    border-radius: 8px;
+                }
+            }
+
+            @include rwd-mobile {
+                flex-direction: column;
+
+                li {
+                    width: 100%;
+                }
+            }
+
+            &-tags {
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    border-radius: 16px;
+                    background-color: $primary-200;
+                    padding: 4px 12px;
+                }
+            }
+        }
+
+        &-pageBtn {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            gap: 16px;
+
+            .pageBtn-active {
+                background-color: $primary-900;
+            }
+
+            a {
+                width: 12px;
+                height: 12px;
+                background-color: $primary-300;
+                border-radius: 50%;
+            }
+
+            @include rwd-mobile {
+                display: none;
+            }
+        }
+
+        &-link {
+            @include rwd-pad {
+                display: none;
+            }
+
+            @include rwd-mobile {
+                margin-top: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                a {
+                    padding: 8px 16px;
+                    background-color: $primary-900;
+                    text-align: center;
+                    border-radius: 5px;
+
+                    span {
+                        vertical-align: sub;
+                    }
+                }
+            }
+        }
+    }
+}
