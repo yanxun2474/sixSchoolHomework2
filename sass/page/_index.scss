@@ -129,7 +129,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        img{
+            width: 58%;
+        }
         @include rwd-pad {
             flex-direction: column;
             gap: 40px;
@@ -176,7 +178,7 @@
     }
 }
 
-.home-travel_sm {
+.home-travel-mobile {
     display: none;
 
     @include rwd-pad {
@@ -304,7 +306,7 @@
     }
 }
 
-.home-app_sm {
+.home-app-mobile {
     display: none;
 
     @include rwd-pad {
@@ -316,6 +318,14 @@
     }
 
     &-content {
+        &-img{
+            @include rwd-pad{
+                img{
+                    width: 100%;
+                }
+                
+            }
+        }
         &-text {
             display: flex;
             align-items: center;
@@ -368,7 +378,9 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        img{
+            width: 58%;
+        }
         @include rwd-pad {
             flex-direction: column;
         }
@@ -416,7 +428,7 @@
     }
 }
 
-.home-clinic_sm {
+.home-clinic-mobile {
     display: none;
 
     @include rwd-pad {
@@ -483,7 +495,7 @@
 
     @include rwd-pad {
         padding: 0 34.5px;
-        margin-top: 80px;
+        padding-top: 80px;
     }
 
     &-content {

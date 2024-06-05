@@ -349,12 +349,7 @@ h5 {
   flex-direction: column;
   gap: 24px;
 }
-.footer-content-form li {
-  border-radius: 8px;
-  width: 306px;
-  border: 1px solid #C1C1C1;
-}
-.footer-content-form li .form-active {
+.footer-content-form .form-active {
   border-radius: 8px;
   background-color: #000000;
   color: #FFFFFF;
@@ -365,6 +360,9 @@ h5 {
   color: #3B3B3B;
   gap: 8px;
   padding: 8px 24px;
+  border-radius: 8px;
+  width: 306px;
+  border: 1px solid #C1C1C1;
 }
 .footer-content-form a:hover {
   border-radius: 8px;
@@ -493,6 +491,9 @@ h5 {
   align-items: center;
   justify-content: space-between;
 }
+.home-travel-content img {
+  width: 58%;
+}
 @media (max-width: 992px) {
   .home-travel-content {
     flex-direction: column;
@@ -533,20 +534,20 @@ h5 {
   vertical-align: sub;
 }
 
-.home-travel_sm {
+.home-travel-mobile {
   display: none;
 }
 @media (max-width: 992px) {
-  .home-travel_sm {
+  .home-travel-mobile {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  .home-travel_sm {
+  .home-travel-mobile {
     display: block;
   }
 }
-.home-travel_sm-content-img {
+.home-travel-mobile-content-img {
   background-image: url(../img/homepage-work1-bg.png);
   background-position: center center;
   background-size: cover;
@@ -554,7 +555,7 @@ h5 {
   background-blend-mode: multiply;
   padding: 93px 40px 0;
 }
-.home-travel_sm-content-text {
+.home-travel-mobile-content-text {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -562,24 +563,24 @@ h5 {
   margin-top: 24px;
   margin-bottom: 48px;
 }
-.home-travel_sm-content-text-tags {
+.home-travel-mobile-content-text-tags {
   display: flex;
   gap: 8px;
 }
-.home-travel_sm-content-text-tags li {
+.home-travel-mobile-content-text-tags li {
   background-color: #F1F1F1;
   border-radius: 16px;
   padding: 4px 12px;
 }
-.home-travel_sm-content-text-link {
+.home-travel-mobile-content-text-link {
   align-self: center;
 }
-.home-travel_sm-content-text-link a {
+.home-travel-mobile-content-text-link a {
   padding: 16px 32px;
   background-color: #000000;
   border-radius: 5px;
 }
-.home-travel_sm-content-text-link a span {
+.home-travel-mobile-content-text-link a span {
   vertical-align: sub;
 }
 
@@ -644,20 +645,25 @@ h5 {
   vertical-align: sub;
 }
 
-.home-app_sm {
+.home-app-mobile {
   display: none;
 }
 @media (max-width: 992px) {
-  .home-app_sm {
+  .home-app-mobile {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  .home-app_sm {
+  .home-app-mobile {
     display: block;
   }
 }
-.home-app_sm-content-text {
+@media (max-width: 992px) {
+  .home-app-mobile-content-img img {
+    width: 100%;
+  }
+}
+.home-app-mobile-content-text {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -665,24 +671,24 @@ h5 {
   margin-top: 24px;
   margin-bottom: 48px;
 }
-.home-app_sm-content-text-tags {
+.home-app-mobile-content-text-tags {
   display: flex;
   gap: 8px;
 }
-.home-app_sm-content-text-tags li {
+.home-app-mobile-content-text-tags li {
   background-color: #F1F1F1;
   border-radius: 16px;
   padding: 4px 12px;
 }
-.home-app_sm-content-text-link {
+.home-app-mobile-content-text-link {
   align-self: center;
 }
-.home-app_sm-content-text-link a {
+.home-app-mobile-content-text-link a {
   padding: 16px 32px;
   background-color: #000000;
   border-radius: 5px;
 }
-.home-app_sm-content-text-link a span {
+.home-app-mobile-content-text-link a span {
   vertical-align: sub;
 }
 
@@ -703,6 +709,9 @@ h5 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.home-clinic-content img {
+  width: 58%;
 }
 @media (max-width: 992px) {
   .home-clinic-content {
@@ -746,20 +755,20 @@ h5 {
   vertical-align: sub;
 }
 
-.home-clinic_sm {
+.home-clinic-mobile {
   display: none;
 }
 @media (max-width: 992px) {
-  .home-clinic_sm {
+  .home-clinic-mobile {
     display: none;
   }
 }
 @media (max-width: 767px) {
-  .home-clinic_sm {
+  .home-clinic-mobile {
     display: block;
   }
 }
-.home-clinic_sm-content-img {
+.home-clinic-mobile-content-img {
   background-image: url(../img/homepage-work3-bg.png);
   background-position: center center;
   background-size: cover;
@@ -767,7 +776,7 @@ h5 {
   background-blend-mode: multiply;
   padding: 90px 40px;
 }
-.home-clinic_sm-content-text {
+.home-clinic-mobile-content-text {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -775,24 +784,24 @@ h5 {
   margin-top: 24px;
   margin-bottom: 48px;
 }
-.home-clinic_sm-content-text-tags {
+.home-clinic-mobile-content-text-tags {
   display: flex;
   gap: 8px;
 }
-.home-clinic_sm-content-text-tags li {
+.home-clinic-mobile-content-text-tags li {
   background-color: #F1F1F1;
   border-radius: 16px;
   padding: 4px 12px;
 }
-.home-clinic_sm-content-text-link {
+.home-clinic-mobile-content-text-link {
   align-self: center;
 }
-.home-clinic_sm-content-text-link a {
+.home-clinic-mobile-content-text-link a {
   padding: 16px 32px;
   background-color: #000000;
   border-radius: 5px;
 }
-.home-clinic_sm-content-text-link a span {
+.home-clinic-mobile-content-text-link a span {
   vertical-align: sub;
 }
 
@@ -806,7 +815,7 @@ h5 {
 @media (max-width: 992px) {
   .home-services {
     padding: 0 34.5px;
-    margin-top: 80px;
+    padding-top: 80px;
   }
 }
 .home-services-content-cards {
@@ -1097,6 +1106,7 @@ h5 {
   border-radius: 8px;
   border: 1px solid #F1F1F1;
   margin-bottom: 16px;
+  width: 100%;
 }
 .works-content-list-text {
   display: flex;
